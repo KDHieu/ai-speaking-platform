@@ -1,0 +1,27 @@
+
+server:
+  port: 8090
+
+spring:
+  application:
+    name: ai-speaking-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ai_speaking
+    username: speaking
+    password: speaking_local_dev
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
